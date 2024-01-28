@@ -9,26 +9,48 @@
     </style>
     <style>
             body{
-
-                background-color: #000;
+                height: 100vh;
+                width: 100%;
+                background: linear-gradient(180deg, #3A5491 0%, #5E63E7 100%);
+                background-repeat: no-repeat;
                 font-family: sans-serif;
             }
 
-            .bg-full{
+            .header{
 
                 color: #fff;
                 text-align: center;
                 font-family: 'Montserrat', sans-serif;
             }
+            
 
     </style>
 </head>
 <body>
-    <div class="bg-full">
+    <div class="header">
             <h2>Create Tasks</h2>
-
-
     </div>
+
+    <form id="createTaskForm" action="process-task.php" method="post">
+        <label for="taskTitle">Task Title:</label>
+        <input type="text" id="taskTitle" name="taskTitle" placeholder="Enter task title" required>
+      
+        <label for="taskDescription">Task Description:</label>
+        <textarea id="taskDescription" name="taskDescription" rows="4" placeholder="Enter task description"></textarea>
+      
+        <label for="dueDate">Due Date:</label>
+        <input type="date" id="dueDate" name="dueDate">
+      
+        <label for="priority">Priority:</label>
+        <select id="priority" name="priority">
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+      
+        <button type="submit">Create Task</button>
+        <a href="index.html">Cancel</a>
+      </form>
     
 </body>
 </html>
