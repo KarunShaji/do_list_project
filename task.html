@@ -4,53 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Tasks</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Kaisei HarunoUmi' rel='stylesheet'>
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-    </style>
-    <style>
-            body{
-                height: 100vh;
-                width: 100%;
-                background: linear-gradient(180deg, #3A5491 0%, #5E63E7 100%);
-                background-repeat: no-repeat;
-                font-family: sans-serif;
-            }
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+        body {
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(180deg, #3A5491 0%, #5E63E7 100%);
+            background-repeat: no-repeat;
+            font-family: sans-serif;
+        }
 
-            .header{
+        .header {
+            color: #fff;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+        }
 
-                color: #fff;
-                text-align: center;
-                font-family: 'Montserrat', sans-serif;
-            }
-            
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
 
+        form {
+            width: 75%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input,
+        form textarea,
+        form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form a {
+            display: block;
+            text-align: center;
+            color: #007BFF;
+            margin-top: 10px;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
-    <div class="header">
-            <h2>Create Tasks</h2>
+    <div class="header pt-5">
+        <h2>Create Tasks</h2>
     </div>
 
-    <form id="createTaskForm" action="process-task.php" method="post">
-        <label for="taskTitle">Task Title:</label>
-        <input type="text" id="taskTitle" name="taskTitle" placeholder="Enter task title" required>
-      
-        <label for="taskDescription">Task Description:</label>
-        <textarea id="taskDescription" name="taskDescription" rows="4" placeholder="Enter task description"></textarea>
-      
-        <label for="dueDate">Due Date:</label>
-        <input type="date" id="dueDate" name="dueDate">
-      
-        <label for="priority">Priority:</label>
-        <select id="priority" name="priority">
-          <option value="high">High</option>
-          <option value="medium">Medium</option>
-          <option value="low">Low</option>
-        </select>
-      
-        <button type="submit">Create Task</button>
-        <a href="index.html">Cancel</a>
-      </form>
-    
+    <div class="container mt-0 pt-0">
+        <form id="createTaskForm" action="process-task.php" method="post">
+            <label for="taskTitle">Task Title:</label>
+            <input type="text" id="taskTitle" name="taskTitle" placeholder="Enter task title" required>
+          
+            <label for="taskDescription">Task Description:</label>
+            <textarea id="taskDescription" name="taskDescription" rows="4" placeholder="Enter task description"></textarea>
+          
+            <label for="dueDate">Due Date:</label>
+            <input type="date" id="dueDate" name="dueDate">
+          
+            <label for="priority">Priority:</label>
+            <select id="priority" name="priority">
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select>
+          
+            <button type="submit">Create Task</button>
+            <a href="index.html">Cancel</a>
+        </form>
+    </div>
 </body>
 </html>
