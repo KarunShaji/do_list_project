@@ -6,20 +6,31 @@
     <title>Create Tasks</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Kaisei HarunoUmi' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Kaisei HarunoUmi' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
         body {
             height: 100vh;
-            width: 100%;
-            background: linear-gradient(180deg, #3A5491 0%, #5E63E7 100%);
+            width: 100vw;
+            background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(https://img3.wallspic.com/crops/8/1/5/6/6/166518/166518-orange-colorfulness-purple-violet-pink-1920x1080.jpg);
+            background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
             font-family: sans-serif;
+            overflow: hidden;
+            
         }
 
-        .header {
-            color: #fff;
+        form h2 {
+            color: #ffffff;
             text-align: center;
             font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .container {
@@ -27,11 +38,30 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            max-width: 1080px;
+        }
+
+       
+        .container1 button
+        {
+            width: 150px;
+            text-align: center;
+            font-weight: bold;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 7px;
+            border: none
+            
+
+        }
+        #cre_sub
+        {
+            margin-top: 30vh;
         }
 
         form {
             width: 75%;
-            background-color: #fff;
+            background-color: #67B1EF;
             padding: 20px;
             border-radius: 8px;
         }
@@ -70,23 +100,30 @@
     </style>
 </head>
 <body>
-    <div class="header pt-5">
-        <h2>Create Tasks</h2>
+    <div>
+        
     </div>
-
-    <div class="container mt-0 pt-0">
+    <div class="row">
+    <div class="container1 col-3 d-flex flex-column align-items-center">
+        <button type="submit" id="cre_sub">Create Subtask</button>
+        <button type="submit">Check List</button>
+        <button type="submit">Priority</button>
+        <button type="submit">Remainder</button>
+    </div>
+      <div class="container col-9">
         <form id="createTaskForm" action="process-task.php" method="post">
-            <label for="taskTitle">Task Title:</label>
-            <input type="text" id="taskTitle" name="taskTitle" placeholder="Enter task title" required>
+            <h2>Create Tasks</h2>
+            <label for="taskTitle">Task Title</label>
+            <input type="text" class = "form-control" id="taskTitle" name="taskTitle" placeholder="Enter task title" required>
           
-            <label for="taskDescription">Task Description:</label>
-            <textarea id="taskDescription" name="taskDescription" rows="4" placeholder="Enter task description"></textarea>
+            <label for="taskDescription">Task Description</label>
+            <textarea id="taskDescription" class = "form-control" name="taskDescription" rows="4" placeholder="Enter task description"></textarea>
           
-            <label for="dueDate">Due Date:</label>
-            <input type="date" id="dueDate" name="dueDate">
+            <label for="dueDate">Due Date</label>
+            <input type="date" class = "form-control" id="dueDate" name="dueDate">
           
-            <label for="priority">Priority:</label>
-            <select id="priority" name="priority">
+            <label for="priority">Priority</label>
+            <select class = "form-control" id="priority" name="priority">
                 <option value="high">High</option>
                 <option value="medium">Medium</option>
                 <option value="low">Low</option>
@@ -95,6 +132,7 @@
             <button type="submit">Create Task</button>
             <a href="index.html">Cancel</a>
         </form>
+      </div>
     </div>
 </body>
 </html>
