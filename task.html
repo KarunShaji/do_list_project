@@ -11,8 +11,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+   <style>
+         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
         body {
             height: 100vh;
             width: 100vw;
@@ -25,7 +25,7 @@
             
         }
 
-        form h2 {
+       form h2 {
             color: #ffffff;
             text-align: center;
             font-family: 'Montserrat', sans-serif;
@@ -33,42 +33,42 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
-        .container {
+        .task,.sidebar {
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            max-width: 1080px;
+            width: 100%;
+            
         }
-
-       
-        .container1 button
+        .side
         {
             width: 150px;
             text-align: center;
             font-weight: bold;
-            margin: 20px;
+            margin-bottom: 20px;
+            margin-left: -150px;
             padding: 10px;
             border-radius: 7px;
             border: none
-            
-
-        }
-        #cre_sub
+            }
+           
+       /* #cre_sub
         {
-            margin-top: 30vh;
-        }
-
+            margin-top: -20px;
+        }*/
+ 
         form {
-            width: 75%;
-            background-color: #67B1EF;
+            width: 100%;
+            background-color:#10a3a3;
             padding: 20px;
-            border-radius: 8px;
+            border-radius: 10px;
+            margin-left: -100px;
         }
 
         form label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
 
         form input,
@@ -97,42 +97,50 @@
             margin-top: 10px;
             text-decoration: none;
         }
+        img{
+            margin-top: 0px;
+        }
     </style>
 </head>
 <body>
-    <div>
-        
+    <div class="container">
+        <div class="row">
+            <div class="sidebar col-2 d-flex  flex-column align-items-center">
+                <button class="side" type="submit" id="cre_sub">Create Subtask</button>
+                <button class="side" type="submit " >Check List</button>
+                <button class="side" type="submit" >Priority</button>
+                <button class="side" type="submit" >Remainder</button>
+            </div>
+              <div class=" task col-7">
+                <form id="createTaskForm" action="process-task.php" method="post">
+                    <h2>Create Tasks</h2>
+                    <label for="taskTitle">Task Title</label>
+                    <input type="text" class = "form-control" id="taskTitle" name="taskTitle" placeholder="Enter task title" required>
+                  
+                    <label for="taskDescription">Task Description</label>
+                    <textarea id="taskDescription" class = "form-control" name="taskDescription" rows="4" placeholder="Enter task description"></textarea>
+                  
+                    <label for="dueDate">Due Date</label>
+                    <input type="date" class = "form-control" id="dueDate" name="dueDate">
+                  
+                    <label for="priority">Priority</label>
+                    <select class = "form-control" id="priority" name="priority">
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                  
+                    <button type="submit">Create Task</button>
+                    <a href="index.html">Cancel</a>
+                </form>
+              </div>
+              <div class="yucky col-3">
+                <img src="speech.png" width="250px" height="300px" alt="speech">
+                <img src="yucky.png" width="300px" height="280px" alt="yucky here">
+              </div>
+            </div>
     </div>
-    <div class="row">
-    <div class="container1 col-3 d-flex flex-column align-items-center">
-        <button type="submit" id="cre_sub">Create Subtask</button>
-        <button type="submit">Check List</button>
-        <button type="submit">Priority</button>
-        <button type="submit">Remainder</button>
-    </div>
-      <div class="container col-9">
-        <form id="createTaskForm" action="process-task.php" method="post">
-            <h2>Create Tasks</h2>
-            <label for="taskTitle">Task Title</label>
-            <input type="text" class = "form-control" id="taskTitle" name="taskTitle" placeholder="Enter task title" required>
-          
-            <label for="taskDescription">Task Description</label>
-            <textarea id="taskDescription" class = "form-control" name="taskDescription" rows="4" placeholder="Enter task description"></textarea>
-          
-            <label for="dueDate">Due Date</label>
-            <input type="date" class = "form-control" id="dueDate" name="dueDate">
-          
-            <label for="priority">Priority</label>
-            <select class = "form-control" id="priority" name="priority">
-                <option value="high">High</option>
-                <option value="medium">Medium</option>
-                <option value="low">Low</option>
-            </select>
-          
-            <button type="submit">Create Task</button>
-            <a href="index.html">Cancel</a>
-        </form>
-      </div>
-    </div>
+
+    
 </body>
 </html>
