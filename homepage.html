@@ -1,11 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To-Do List</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
-    
+    <div class="header">
+        <nav class="navbar navbar-expand-sm bg-light pt-0 pb-0">
+            <span class="navbar-brand welcome">Good Morning, Megha</span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="fa fa-bars"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="navbar-nav">
+                        <form class="form-inline my-2 my-lg-0">
+                            <div class="input-group">
+                                <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search" aria-label="Search">
+                            </div>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="fa fa-home"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#myModal"><span class="fa fa-plus-square"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><span class="fa fa-bell-o"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Create task modal -->
+    <div class="container">
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add Task</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="task-form">
+                            <div class="form-group">
+                                <label for="task-name">Task Name</label>
+                                <input class="form-control" type="text" id="task-name" name="taskName">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="task-description">Description</label>
+                                <textarea class="form-control" id="task-description" name="taskDescription"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="task-priority">Priority</label><br>
+                                <label class="vertical-radio">
+                                    <input type="radio" name="subject" value="low"> Low
+                                </label>
+                                <label class="vertical-radio">
+                                    <input type="radio" name="subject" value="medium"> Medium
+                                </label>
+                                <label class="vertical-radio">
+                                    <input type="radio" name="subject" value="high"> High
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="task-due">Due Date</label>
+                                <input class="form-control" type="date" id="task-due" name="taskDue">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="task-assign">Assign to</label>
+                                <div class="form-container">
+                                    <span class="material-symbols-outlined">
+                                        person
+                                    </span>
+                                    <input class="form-control" type="text" name="task-assign" placeholder="Enter Name">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Create Task</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-Fluid" id="main-page">
+        <!-- Your main page content goes here -->
+    </div>
+
+    <div class="content">
+        <div id="task-container">
+            <p>hoi</p>
+            <!-- Tasks will be displayed here -->
+        </div>
+
+        <div id="blogs-section">
+            <h2>Successful Day Tips</h2>
+            <div class="blog">
+                <h3>Blog Title 1</h3>
+                <p>Content of Blog 1...</p>
+            </div>
+            <div class="blog">
+                <h3>Blog Title 2</h3>
+                <p>Content of Blog 2...</p>
+            </div>
+            <!-- Add more blogs here -->
+        </div>
+    </div>
+
+<script>
+    const createTaskBtn = document.getElementById('create-task-btn');
+    const createTaskModal = document.getElementById('create-task-modal');
+
+    createTaskBtn.addEventListener('click', () => {
+        createTaskModal.style.display = 'block';
+    });
+
+    // Code to handle form submission and adding tasks goes here
+</script>
+ 
 </body>
 </html>
