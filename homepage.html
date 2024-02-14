@@ -1,11 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To-Do List</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="home.css">
 </head>
 <body>
+    <div class="header">
+        <nav class="navbar navbar-expand-sm bg-dark pt-0 pb-0">
+	        <a class="navbar-brand text-secondary" href="#"><div class="welcome">Good Morning,<br>Megha</div></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link " href="#"><span class="fa fa-home"></span></a>
+                </li>
+                <li class="nav-item">
+                    <button id="create-task-btn">
+                        <a class="nav-link " href="#"><span class="fa fa-bars"></span></a>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#"><span class="fa fa-bars"></span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+      <!-- create task modal -->
+    <div id="create-task-modal" style="display: none;">
+        <form id="task-form">
+            <label for="task-name">Task Name:</label>
+            <input type="text" id="task-name" name="taskName">
+            <br>
+            <label for="task-description">Description:</label>
+            <textarea id="task-description" name="taskDescription"></textarea>
+            <br>
+            <button type="submit">Create Task</button>
+        </form>
+    </div>  
+
+<div class="container-Fluid" id="main-page">
     
+</div>
+<div class="content">
+    <div id="task-container">
+        <p>hoi</p>
+        <!-- Tasks will be displayed here -->
+    </div>
+   
+
+
+    <!-- Create task form will be displayed here -->
+    
+    <div id="blogs-section">
+        <h2>Successful Day Tips</h2>
+        <div class="blog">
+            <h3>Blog Title 1</h3>
+            <p>Content of Blog 1...</p>
+        </div>
+        <div class="blog">
+            <h3>Blog Title 2</h3>
+            <p>Content of Blog 2...</p>
+        </div>
+        <!-- Add more blogs here -->
+    </div>
+</div>  
+    
+    
+
+
+
+<script>
+    const createTaskBtn = document.getElementById('create-task-btn');
+    const createTaskModal = document.getElementById('create-task-modal');
+
+    createTaskBtn.addEventListener('click', () => {
+        createTaskModal.style.display = 'block';
+    });
+
+    // Code to handle form submission and adding tasks goes here
+</script>
+ 
 </body>
 </html>
