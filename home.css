@@ -10,52 +10,30 @@ body {
 .welcome {
     font-size: 25px;
     font-weight: bolder;
-    width: 100%;
-    height: 80px;
+    
+   
 }
-
-.content {
+.search-input {
+    background-image: url('search.png');
+    background-repeat: no-repeat;
+    background-position:right 10px center;
+    padding-right: 30px; /* Adjust this value according to the width of your icon */
+    border-radius: 30px;
+    background-size: 20px 20px;
+}
+.content{
     display: flex;
 }
-
-.vertical-radio {
-    display: block;
-    margin-bottom: 10px;
+#task-container{
+    background-color: aquamarine;
+    width: 50%;
+    height: 100vh;
 }
-
-.form-group {
-    position: relative;
+#create-task-modal{
+    width: 50%;
+    height: 400px;
+    background-color: blueviolet;
 }
-
-.form-group .material-symbols-outlined {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    color: #aaa;
-}
-
-.form-group .form-control {
-    padding-left: 30px;
-}
-
-.modal-content {
-    height: 80%;
-}
-
-.modal-body {
-    overflow-y: auto; /* Allow the modal body to scroll if content exceeds the height */
-}
-
-.icon-container {
-    display: flex;
-    align-items: center;
-}
-
-.modal-dialog {
-    width: 100%;
-}
-
-.form-container {
-    width: 100%;
+#blogs-section{
+    /*float: right;*/
 }
