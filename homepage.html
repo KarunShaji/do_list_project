@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>To-Do List</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -12,25 +13,34 @@
 </head>
 <body>
     <div class="header">
-        <nav class="navbar navbar-expand-sm bg-dark pt-0 pb-0">
-	        <a class="navbar-brand text-secondary" href="#"><div class="welcome">Good Morning,<br>Megha</div></a>
+        <nav class="navbar navbar-expand-sm bg-light pt-0 pb-0">
+	        <span class="navbar-brand " ><div class="welcome">Good Morning, Megha</div></span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="fa fa-bars"></span>
             </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
+            
+            <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav ">
+                <li class="navbar-nav">
+                    <form class="form-inline my-2 my-lg-0">
+                        <div class="input-group">
+                            <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                    </form>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link " href="#"><span class="fa fa-home"></span></a>
                 </li>
                 <li class="nav-item">
                     <button id="create-task-btn">
-                        <a class="nav-link " href="#"><span class="fa fa-bars"></span></a>
+                        <a class="nav-link " href="#"><span class="fa fa-plus-square-o" ></span></a>
                     </button>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="#"><span class="fa fa-bars"></span></a>
+                    <a class="nav-link " href="#"><span class="fa fa-bell-o"></span></a>
                 </li>
             </ul>
+            
         </nav>
     </div>
       <!-- create task modal -->
