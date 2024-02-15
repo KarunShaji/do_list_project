@@ -29,11 +29,66 @@ body {
     width: 50%;
     height: 100vh;
 }
-#create-task-modal{
-    width: 50%;
-    height: 400px;
-    background-color: blueviolet;
+.modal-title {
+    text-align: center;
+    margin: 0 auto;
+    font-weight: bold;
 }
-#blogs-section{
-    /*float: right;*/
+.modal-body label {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.modal-body .vertical-radio {
+    display: block;
+    margin-bottom: 5px;
+    padding-left: 30px;
+    
+}
+
+.modal-body textarea,
+.modal-body input {
+
+    background-color: #9da1a521 ;
+    padding: 6px;
+
+}
+
+.modal-body textarea:focus,
+.modal-body input:focus {
+    outline: none;
+}
+
+#task-form button.btn-primary {
+
+    background-color: #008000;
+    color: #ffff;
+    width: 115px;
+    height: 40px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+#task-form button.btn-danger {
+
+    background-color: #ff0000;
+    color: #ffff;
+    width: 115px;
+    height: 40px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.form-buttons{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+.form-container .material-symbols-outlined {
+    position: absolute;
+    left: 20px;
+    top: 83%;
+    transform: translateY(-50%);
+    color: #00000077;
+}
+#assigntext {
+    padding-left: 30px;
 }
