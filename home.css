@@ -3,16 +3,20 @@
 }
 
 body {
-    width: 100%;
+    width: 100%; 
     height: 100vh;
+    margin: 0;
 }
 
+#main-page{
+    display: flex;
+    background-color:#f5f5f5;
+}
 .welcome {
     font-size: 25px;
-    font-weight: bolder;
-    
-   
+    font-weight: bolder;    
 }
+
 .search-input {
     background-image: url('search.png');
     background-repeat: no-repeat;
@@ -21,17 +25,29 @@ body {
     border-radius: 30px;
     background-size: 20px 20px;
 }
-.content{
-    display: flex;
+
+
+.task-container {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 60%;
+    height: 100lvh;
+   
 }
-#task-container{
-    background-color: aquamarine;
-    width: 50%;
-    height: 100vh;
+.task-card {
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Distribute items evenly along the main axis */
 }
 .modal-title {
     text-align: center;
-    margin: 0 auto;
     font-weight: bold;
 }
 .modal-body label {
@@ -92,3 +108,104 @@ body {
 #assigntext {
     padding-left: 30px;
 }
+.sidebar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+   
+}
+
+.side{
+    margin: 20px;
+    width: 80%;
+    height: 50px;
+    border-radius: 30px;
+}
+.side:active {
+    border: none; /* remove border */
+}
+.delete-task {
+    width: 25px;
+    height: 25px;
+   /* Adjust margin as needed to separate the button from the task text */
+   
+}
+.progress-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;/*to align at top of div*/
+    height: 50vh;
+
+}
+
+.progress-card-container {
+    position: relative;
+    margin: 20px;
+}
+
+.progress-card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Default shadow */
+    text-align: center;
+    position: relative;
+   /* z-index: 1;*/
+
+}
+.progress-card::after {
+    content: '';
+    position: absolute;
+    bottom: -20px; /* Adjust the dimensions of the shadow */
+    right: -20px; /* Adjust the dimensions of the shadow */
+    width: calc(100% + 40px); /* Adjust the dimensions of the shadow */
+    height: calc(100% + 40px); /* Adjust the dimensions of the shadow */
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+    border-radius: 10px;
+    z-index: -1; /* Behind the card */
+}
+
+.progress-circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.progress-circle .progress-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.progress-circle .progress-ring__circle {
+    stroke-dasharray: 314;
+    stroke-dashoffset: calc(314 - (314 * var(--percentage)) / 100);
+    transition: stroke-dashoffset 0.3s;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*.shadow-card {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 80px;
+    height: 80px;
+    width: 100%;
+    height: 200px;
+    background-color:rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    opacity: 1;
+    z-index: 0;
+}*/

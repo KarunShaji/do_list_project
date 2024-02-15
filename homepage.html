@@ -40,7 +40,7 @@
                     </li>
                 </ul>
             </div>
-        </nav>
+        </nav>   
     </div>
 
     <!-- Create task modal -->
@@ -101,29 +101,60 @@
         </div>
     </div>
 
+<!--modal for task creation ends-->
     <div class="container-Fluid" id="main-page">
-        <!-- Your main page content goes here -->
-    </div>
+        <div class="sidebar">
+                <button class="side " type="submit" id="cre_sub">Sort</button>
+                <button class="side " type="submit " >Personal</button>
+                <button class="side " type="submit" >Work</button>
+                <button class="side " type="submit" >Completed</button>
+                <button class="side " type="submit" >Pending</button>
+                <button class="side " type="submit" >Settings</button>
+        </div>
+              <!-- Your main page content goes here -->
 
-    <div class="content">
-        <div id="task-container">
-            <p>hoi</p>
+        <div class="task-container" id="task-container">
+            <div class="task-card">
+                <input type="checkbox" id="task1">
+                <label for="task1">Wash clothes</label>
+                <a class="delete-task"><i class="fa fa-trash-o"></i></a>
+            </div>
+            <div class="task-card">
+                <input type="checkbox" id="task2">
+                <label for="task2">Drink 3L of water</label>
+                <a class="delete-task"><i class="fa fa-trash-o"></i></a>
+            </div>
+            <div class="task-card">
+                <input type="checkbox" id="task3">
+                <label for="task3">Go for a walk at 5</label>
+                <a class="delete-task"><i class="fa fa-trash-o"></i></a>
+            </div>
+            <div class="quote text-secondary mt-5"><p class="text-center">"We need to do a better job of putting ourselves higher on our own 'to do' list"<br> --Michelle Obama</p></div>
             <!-- Tasks will be displayed here -->
         </div>
 
-        <div id="blogs-section">
-            <h2>Successful Day Tips</h2>
-            <div class="blog">
-                <h3>Blog Title 1</h3>
-                <p>Content of Blog 1...</p>
+<!--PROGRESS DIV-->
+<div class="progress-container">
+    <div class="progress-card-container">
+        <div class="progress-card">
+            <h3>Daily Task Progress</h3>
+            <div class="progress-circle">
+                <svg class="progress-ring" width="120" height="120">
+                    <circle class="progress-ring__circle" stroke="#007bff" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"></circle>
+                </svg>
+                <div class="progress-text">60%</div>
             </div>
-            <div class="blog">
-                <h3>Blog Title 2</h3>
-                <p>Content of Blog 2...</p>
-            </div>
-            <!-- Add more blogs here -->
         </div>
+        <!--<div class="shadow-card">You can track your progress here<br>
+            Just Do It!
+        </div>-->
     </div>
+</div>
+
+
+
+
+
 
 <script>
     const createTaskBtn = document.getElementById('create-task-btn');
