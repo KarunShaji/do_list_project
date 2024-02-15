@@ -6,56 +6,45 @@
     <title>To Do List</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Kaisei HarunoUmi' rel='stylesheet'>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  
-  <link rel="stylesheet" type="text/css" href="loginsignup.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="loginsignup.css">
 </head>
 <body>
     <div class="container" id="container">
-             <div class="form-container jumbotron sign-up-container">
-                <form action="#">
-                    <!--<div class="container form-group text-center">-->
-                        <h1>Log In</h1>
-                        <input type="text" placeholder="Username" class="form-control mt-5  rounded-pill">
-                        <input type="Password" placeholder="Password" class="form-control mt-4 rounded-pill">
-                        <button type="button" class="btn mt-5 signupbtn rounded-pill" style="background-color: #6E10CC;">Log In</button>
-                        <!--<input type="button" class="mt-4 text-center" value="Signup">--> 
-                </form>
-            </div>
-             <div class="form-container jumbotron sign-in-container">
-                <form action="#">
-                    <h1>Sign up</h1>
-                    <input type="text" placeholder="Username" class="form-control mt-5 rounded-pill">
-                    <input type="email" placeholder="Email" class="form-control mt-4 rounded-pill">
-                    <input type="Password" placeholder="Password" class="form-control mt-4 rounded-pill">
-                    <button type="button" class="btn mt-5 signupbtn rounded-pill " style="background-color: #6E10CC;">Sign Up</button>
-                    <!--<input type="button" class="mt-4 text-center" value="Signup">-->
-                </form>
-            </div> 
-       
+        <div class="form-container jumbotron sign-up-container">
+            <form action="#">
+                <h1>Log In</h1>
+                <input type="text" placeholder="Username" class="form-control mt-5 rounded-pill">
+                <input type="password" placeholder="Password" class="form-control mt-4 rounded-pill">
+                <button type="button" class="btn mt-5 signupbtn rounded-pill" style="background-color: #6E10CC; color: #fff;">Log In</button>
+            </form>
+        </div>
+        <div class="form-container jumbotron sign-in-container">
+            <form action="#">
+                <h1>Sign up</h1>
+                <input type="text" placeholder="Username" class="form-control mt-5 rounded-pill">
+                <input type="email" placeholder="Email" class="form-control mt-4 rounded-pill">
+                <input type="password" placeholder="Password" class="form-control mt-4 rounded-pill">
+                <button type="button" class="btn mt-5 signupbtn rounded-pill" style="background-color: #6E10CC; color: #fff;">Sign Up</button>
+            </form>
+        </div> 
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
-                    <h1>Hi There,</h1>
-                    <p>“Step into productivity!<br>
-                    Your journey begins with a<br> warm welcome to your to-do<br>list haven”</p>
+                    <h1 style="color: #fff;">Hi There,</h1>
+                    <p>“Step into productivity!<br>Your journey begins with a<br>warm welcome to your to-do<br>list haven”</p>
                     <button class="ghost" id="signIn">Log In</button>
                 </div>
                 <div class="overlay-panel overlay-right">
-                    <h1>Hello, Friend!</h1>
-                     <p>“Step into productivity!<br>
-                     warm welcome to your to-do<br>list haven”</p>
+                    <h1 style="color: #fff;">Hello, Friend!</h1>
+                    <p>“Step into productivity!<br>warm welcome to your to-do<br>list haven”</p>
                     <button class="ghost" id="signUp">Sign Up</button>
                 </div>
             </div>
         </div>
     </div>
-    
-
-
-   
     <script src="main.js"></script> 
 </body>
 </html>
