@@ -6,24 +6,31 @@ body {
     width: 100%; 
     height: 100vh;
     margin: 0;
+    background-color: rgba(195, 193, 249,0.2);
+    color:white;
+    
 }
 
 #main-page{
     display: flex;
-    margin-top: 55px;
+    margin-top: 10px;
+    
 
 }
 
 .navbar {
-    overflow: hidden;
-    background-color: #333;
+   /* overflow: hidden;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
+    background-color: rgba(195, 193, 249,0.2);
   }
 .welcome {
     font-size: 25px;
-    font-weight: bolder;    
+    font-weight: bolder;
+   /* background-color: #c3c1f9;*/
+    color: #c3c1f9;
+    text-shadow: 1px 1px rgba(62, 53, 183, 0.3);  
 }
 
 .search-input {
@@ -33,9 +40,10 @@ body {
     padding-right: 30px; /* Adjust this value according to the width of your icon */
     border-radius: 30px;
     background-size: 20px 20px;
+    
 }
 
-
+/*task container starts here*/
 .task-container {
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -43,15 +51,19 @@ body {
     border-radius: 5px;
     width: 60%;
     height: 100lvh;
+    border: none;
+    background: rgba(62, 53, 183, 0.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255,0.4) ; 
    
 }
 .task-card {
-    background-color: #f8f9fa;
+    background-color:rgba(255, 255, 255,0.2);
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
-    border: 1px solid #ced4da;
+    border: none;
     display: flex;
+    background-color:rgba(165, 160, 243,0.5);
     align-items: center; /* Align items vertically */
     justify-content: space-between; /* Distribute items evenly along the main axis */
 }
@@ -122,6 +134,8 @@ body {
     align-items: center;
     flex-direction: column;
     width: 10%;
+   
+    
     
    
 }
@@ -131,9 +145,22 @@ body {
     width: 80%;
     height: 50px;
     border-radius: 30px;
+    background-color:rgba(255, 255, 255,0.1) ;
+    border: none;
+    outline: none;
+    transition: box-shadow 0.3s;
+    box-shadow: 0 0 20px rgba(62, 53, 183, 0.3) ; /* Glow effect */
+   
+}
+.side.clicked {
+    border:none;
+    outline:none ; /* Remove border after the button has been clicked */
 }
 .side:active {
-    border: none; /* remove border */
+    outline:none ; /* Remove the outline when active */
+}
+.side:hover {
+    box-shadow: 0 0 20px rgba(62, 53, 183, 0.3) ; /* Glow effect */
 }
 .delete-task {
     width: 25px;
@@ -148,6 +175,7 @@ body {
     flex-direction: column;
     height: 100vh;
     width: 30%;
+    
 
 }
 
@@ -158,28 +186,28 @@ body {
 }
 
 .progress-card {
-    background-color: #f8f9fa;
+    background-image: linear-gradient(rgb(195, 193, 249),rgba(62, 53, 183,0.9));
+    
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4); /* Default shadow */
+    box-shadow: 0px 30px 50px rgba(62, 53, 183,0.5); /* Default shadow */
     text-align: center;
     position: relative;
     margin-bottom: 20px; /* Add space between progress card and card list */
     overflow: hidden;
-
 }
     .progress-card::after {
         content: '';
         position: absolute;
         bottom: -20px; /* Adjust the dimensions of the shadow */
         right: -20px; /* Adjust the dimensions of the shadow */
-        width: calc(100% + 40px); /* Adjust the dimensions of the shadow */
-        height: calc(100% + 40px); /* Adjust the dimensions of the shadow */
-        background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+        width: calc(100% + 60px); /* Adjust the dimensions of the shadow */
+        height: calc(100% + 60px); /* Adjust the dimensions of the shadow */
+        background: linear-gradient(to bottom right, rgba(252, 249, 249, 0.4), rgba(62, 53, 183,0.5) /*rgba(231, 230, 230, 0)*/);
         border-radius: 10px;
         z-index: -1; /* Behind the card */
         filter: blur(20px);
-        /*box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);*/
+      /*  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);*/
     }
     
   
@@ -231,7 +259,7 @@ body {
      width: 300px;
      border-radius: 10px;
     height: 200px;
-    border: 1px solid #f1f1f1;
+    border: none;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
   }
   
@@ -251,11 +279,10 @@ body {
     background-repeat: no-repeat;
   }
   .flip-card-back{
-    background-image: url(premium_photo-1664299968645-095a420293dc.avif);
+    background-image:url(premium_photo-1664299968645-095a420293dc.avif) ;
     background-size: cover;
     background-repeat: no-repeat;
-    filter: blur(8px);
-    -webkit-filter: blur(1px);
+    
   }
   
   /* Do an horizontal flip when you move the mouse over the flip box container */
@@ -285,4 +312,23 @@ body {
     color: white;
     transform: rotateY(180deg);
   } 
- 
+ /* Width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-image: linear-gradient(#c3c1f9,#3e35b7);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(62, 53, 183,0.1);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background:#3e35b7;
+  }
+  
