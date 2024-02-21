@@ -1,0 +1,37 @@
+.body{
+    background-color: 	#3b444b;
+}
+.setting{
+    background-color: black;
+    width: 30%;
+    height: 100vh;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    text-align: center;
+}
+
+.block{
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    margin: 0px;
+    position: relative;
+    top: 100px;
+
+}
+.set-head{
+    position: relative;
+    height: 250px;
+    
+}
+.cur-set{
+    position: relative;
+    top: 50px;
+    height: 62vh;
+}
+.closee{
+    position: relative;
+    top: 200px;
+    display: flex;
+    justify-content:center ;
+}
