@@ -1,15 +1,11 @@
-const cardContainer = document.getElementById('card-container');
+// Get all elements with the "side" class
+const sideButtons = document.querySelectorAll('.side');
 
-window.addEventListener('scroll', () => {
-  if (isInViewport(cardContainer)) {
-    cardContainer.classList.add('reveal');
-  }
+// Loop through each button
+sideButtons.forEach(button => {
+    // Add a click event listener to each button
+    button.addEventListener('click', () => {
+        // Toggle a class to remove the border after the button is clicked
+        button.classList.toggle('clicked');
+    });
 });
-
-function isInViewport(element) {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.left >= 0 &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
